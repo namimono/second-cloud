@@ -1,0 +1,6 @@
+rootProject.name = 'second-cloud'
+include 'user-provide'
+include 'user-provider-api'
+include 'common'
+include 'consumer'
+

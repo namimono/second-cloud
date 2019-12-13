@@ -1,0 +1,21 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //apache dubbo
+    implementation ("org.apache.dubbo:dubbo:${this.dubboVersion}"){
+        exclude group:'org.springframework',module:'spring'
+        exclude group:'javax.servlet',module:'servlet-api'
+        exclude group:'log4j',module:'log4j'
+    }
+    implementation "org.apache.dubbo:dubbo-spring-boot-starter"
+
+    //将dubbo注册到nacos所需要的依赖
+    implementation 'org.apache.dubbo:dubbo-registry-nacos'
+    implementation 'com.alibaba.nacos:nacos-client'
+    implementation 'com.alibaba.spring:spring-context-support:1.0.2'
+
+    //添加nacos-config分布式配置中心
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+}
