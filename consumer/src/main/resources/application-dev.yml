@@ -9,6 +9,7 @@ server:
 dubbo:
   registry:
     address: nacos://localhost:8848
+    check: false
   scan:
     base-packages: com.nakami.springcloud.consumer
   protocol:

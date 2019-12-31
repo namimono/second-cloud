@@ -1,0 +1,31 @@
+#访问地址，端口
+server:
+  port: 9000
+  #配置tomcat
+  tomcat:
+    max-threads: 300
+
+#注册dubbo到nacos
+dubbo:
+  registry:
+    address: nacos://localhost:8848
+    check: false
+  scan:
+    base-packages: com.nakami.springcloud.consumer
+  protocol:
+    name: dubbo
+    port: -1
+  consumer:
+    check: false
+  provider:
+    #设置负载均衡为轮询
+    loadbalance: roundrobin
+
+#定义服务名
+spring:
+  application:
+    name: consumer
+  main:
+    allow-bean-definition-overriding: true
+
+

@@ -61,7 +61,6 @@ allprojects {
         implementation('org.springframework.boot:spring-boot-starter-web')
         implementation('org.springframework.boot:spring-boot-starter-test')
 
-        implementation project(':common')
 
     }
 
@@ -80,12 +79,16 @@ project(':consumer'){
         //  jar {
         //            enabled = true
         //  }
+        implementation project(':common')
+
         implementation project(':user-provider-api')
     }
 }
 project(':user-provide'){
     dependencies {
         implementation project(':user-provider-api')
+        implementation project(':common')
+
     }
 }
 
