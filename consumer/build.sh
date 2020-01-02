@@ -1,6 +1,6 @@
 #!/usr/bin bash
 
 gradle -v
-sudo gradle bootjar
+gradle bootjar
 
-sudo docker build -t namimono/second-cloud-consumer:latest .
+sudo docker build -t namimono/second-cloud-consumer:0.0.2 .

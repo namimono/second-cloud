@@ -8,9 +8,11 @@ server:
 #注册dubbo到nacos
 dubbo:
   registry:
-    address: nacos://nacos:8848
+    #http://192.168.56.101:8848
+    address: nacos://192.168.56.1:8848
+    check: false
   scan:
-    base-packages: com.nakami.gradle.springcloud.provider.service
+    base-packages: com.nakami.springcloud.user.provider
   protocol:
     name: dubbo
     port: -1
@@ -24,7 +26,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
     platform: mysql
-    url: jdbc:mysql://mysql:3306/db_bookstore?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    url: jdbc:mysql://192.168.56.1:3306/db_bookstore?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
     username: root
     password: 123456
     druid:

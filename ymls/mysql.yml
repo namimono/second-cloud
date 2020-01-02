@@ -12,6 +12,8 @@ services:
     command:
       --default-authentication-plugin=mysql_native_password
     volumes:
-      - /usr/local/docker/second-cloud/mysql/conf:/etc/mysql
-      - /usr/local/docker/second-cloud/mysql/logs:/var/log/mysql
-      - /usr/local/docker/second-cloud/mysql/data:/var/lib/mysql
+      - /usr/local/docker/secondcloud/mysql/conf:/etc/mysql
+      - /usr/local/docker/secondcloud/mysql/logs:/var/log/mysql
+      - /usr/local/docker/secondcloud/mysql/data:/var/lib/mysql
+    ports:
+      - 3306:3306
